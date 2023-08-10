@@ -22,11 +22,6 @@ Before starting the API, ensure that Docker is up and running on your system. If
 
 2. To start the service using Docker Compose, execute:
    ```bash
-   docker-compose up
-   ```
-
-   Alternatively, you can use the provided Makefile commands:
-   ```bash
    make compose
    ```
 

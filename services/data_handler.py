@@ -145,9 +145,9 @@ class PowerPlantDataHandler:
         Returns:
             pd.DataFrame: A dataframe containing only the data for the specified state.
         """
-        if state not in self.state_data["State abbreviation"].values:
+        if state not in self.plant_data["Plant state abbreviation"].values:
             raise DataNotFoundExceptionError(f"No data found for the state '{state}'")
 
-        filtered_data = self.state_data[self.state_data["State abbreviation"] == state]
+        filtered_data = self.plant_data[self.plant_data["Plant state abbreviation"] == state]
 
         return DataFrameModel(data=filtered_data.to_dict(orient="records"))

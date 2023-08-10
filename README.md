@@ -18,8 +18,7 @@ Before starting the API, ensure that Docker is up and running on your system. If
 
 1. Clone the repository:
    ```bash
-   git clone [repository_url]
-   cd [repository_directory]
+   git clone git@github.com:omarkahwaji/power_plants.git
    ```
 
 2. To start the service using Docker Compose, execute:

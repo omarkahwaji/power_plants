@@ -8,7 +8,6 @@ This API provides access to power plant data, allowing users to fetch top power 
 ## Prerequisites
 
 - Docker
-- Docker Compose
 
 ### Ensuring Docker is Running
 

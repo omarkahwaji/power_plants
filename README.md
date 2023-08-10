@@ -1,5 +1,5 @@
 
-# Power Plants API README
+# Power Plants API
 
 ## Overview
 
@@ -121,18 +121,11 @@ Before starting the API, ensure that Docker is up and running on your system. If
    curl -X GET "http://localhost:8000/health"
    ```
 
-## Error Handling
 
-1. **DataNotFoundExceptionError**: Raised when the required data file is missing.
-2. **BadMetricError**: Raised when an invalid metric is provided.
 
-## Data Cleaning
+## Docs
 
-The API employs a series of data cleaning operations before processing any requests. This ensures that the data returned is accurate and free of anomalies. The cleaning operations include removing metadata rows, converting percentages to floats, and more.
-
-## Metrics
-
-Prometheus metrics are available at `http://localhost:8000/metrics`.
+Swagger documentations are available at `http://localhost:8000/Docs`.
 
 ## Shutdown
 

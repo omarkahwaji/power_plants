@@ -1,0 +1,33 @@
+{
+  "name": "Python Project",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": { 
+      "VARIANT": "^3.8",
+      "INSTALL_NODE": "false"
+    }
+  },
+  "runArgs": [
+    "-u",
+    "vscode",
+    "-e",
+    "PIPENV_VENV_IN_PROJECT=true",
+    "-e",
+    "PYTHONPATH=${containerWorkspaceFolder}"
+  ],
+  "settings": { 
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "python.pythonPath": "${containerWorkspaceFolder}/.venv/bin/python",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.format.sortImports": true,
+    "python.testing.pytestArgs": [],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
+  },
+  "extensions": ["ms-python.python"],
+  "postCreateCommand": "pipenv install --dev",
+  "remoteUser": "vscode"
+}

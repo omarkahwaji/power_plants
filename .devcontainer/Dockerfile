@@ -7,6 +7,9 @@ WORKDIR /app
 # Install Poetry
 RUN pip install poetry
 
+COPY pyproject.toml ./
+COPY poetry.lock ./
+
 # Copy the rest of the code
 COPY . .
 
